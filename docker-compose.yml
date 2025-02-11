@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: node_app
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - PORT=5000
+      - MONGO_URI=mongodb+srv://test-user:v0VDE8RWtkP74IUx@cluster0.fqghs.mongodb.net/categoryDB?retryWrites=true&w=majority
+      - JWT_SECRET_KEY=MY_SECRET_KEY
+    volumes:
+      - .:/usr/src/app
+    command: npm run dev
