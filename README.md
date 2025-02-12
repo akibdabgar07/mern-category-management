@@ -155,8 +155,7 @@ get api/category
     ]
 }
 
-
-✅ Update a Category
+ Update a Category
 Endpoint: PUT /api/category/:id
 Request Body:
 
